@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="solid green" >
+<a href="{% url 'manager_page'%}">Back To Home Page</a>
+<table align="center" text_align="center" border="2px solid black" cellpadding="2" cellspacing="2" padding="20px" >
+
+    <thead text-align="center">
+    <th>Emp Id</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Mobile</th>
+    <th>Email Id</th>
+    <th>Date Of Birth</th>
+    <th>Current Profile</th>
+    <th>Destination</th>
+    <th>Resume</th>
+    </thead>
+    <tbody>
+    {% for data in object_list%}
+    <tr>
+        <td>{{data.user.id}}</td>
+    <td>{{data.user.first_name}}</td>
+    <td>{{data.user.last_name}}</td>
+    <td>{{data.mobile}}</td>
+    <td>{{data.user.email}}</td>
+    <td>{{data.dob}}</td>
+    <td>{{data.current_profile}}</td>
+    <td>{{data.degination}}</td>
+
+    <td><a href=" media/{{data.resume}}" download>{{data.resume.name}}</a> </td>
+
+    </tr>
+    </tbody>
+
+
+
+
+    {% endfor %}
+</table>
+
+
+
+</body>
+</html>

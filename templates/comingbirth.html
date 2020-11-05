@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="{% url 'manager_page'%}">Back To Home Page</a>
+<h4>Upcoming Birth Days!!!</h4>
+{% for i in data1%}
+<h5> Wish {{i.user.first_name}}{{i.user.last_name}} on  {{i.dob}}</h5>
+{% endfor %}
+
+</body>
+</html>

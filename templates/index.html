@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register here</title>
+</head>
+<body bgcolor="blue">
+<h3>Register Here</h3>
+<div align="center">
+<form method="post" action="" enctype="multipart/form-data">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" value="submit">
+    <a href="{% url 'login' %}">Login Here</a>
+
+
+
+</form></div>
+
+</body>
+</html>

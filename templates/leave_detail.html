@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>leave detail</title>
+</head>
+<body bgcolor="solid mango">
+<a href="{% url 'manager_page'%}">Back To Home Page</a>
+<table align="center" text_align="center" border="2px solid black" cellpadding="2" cellspacing="2" padding="20px">
+    <thead text-align="center">
+    <th>Emp Id</th>
+    <th>Name</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th>Reason</th>
+    </thead>
+    <tbody>
+    {%for i in data%}
+    <tr>
+        <td>{{i.user.id}}</td>
+        <td>{{i.user.first_name}}</td>
+        <td>{{i.duration_from}}</td>
+        <td>{{i.duration_to}}</td>
+        <td>{{i.leave_msg}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+</body>
+</html>

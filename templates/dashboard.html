@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WELCOME</title>
+</head>
+<body bgcolor="solid orange">
+<div>
+    <a href="{% url 'update_profile' pk=user.emp.id%}">Update Your Profile</a>
+<a href="{% url 'leave1' %}"> Create Leave</a>
+    <div align="right">
+        <h4> Welcome {{user.username}}</h4>
+        <a href="{% url 'logout1' %}">Logout</a>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

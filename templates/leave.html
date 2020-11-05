@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leave</title>
+</head>
+<body bgcolor="solid mango">
+<a href="{% url 'dashboard_page' %}">Back To Main Page</a>
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>

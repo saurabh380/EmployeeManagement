@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manager Dashboard</title>
+</head>
+<body bgcolor="solid green">
+ <h3> Welcome {{user}} </h3>
+<div align="right">
+<a href="{% url 'empdetail'%}">Employee Detail</a>
+<a href="{% url 'leave_detail' %}">Employee Leave Details</a>
+<a href="{% url 'todaybirthday'%}">Today's Birthday</a>
+<a href="{% url 'upcoming'%}">Upcoming Birthday</a>
+<a href="{% url 'logout1' %}">Logout</a>
+ </div>
+
+<div align="center">
+    {%for i in data%}
+    <h3> Today {{i.user.first_name}} Birth Day!!!</h3>
+    {%if empty%}
+    "No Birth Day Today"
+    {% endif%}
+    {% endfor %}
+</div>
+
+</body>
+</html>
